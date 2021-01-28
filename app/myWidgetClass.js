@@ -1,7 +1,6 @@
 (function () {
     // yay for JavaScript closures!
     var taps = -1;
-    var rng = new java.util.Random();
     android.appwidget.AppWidgetProvider.extend("com.tns.MyWidget", {
         // is called each time the widget is added to the homescreen, or update ticks
         onUpdate: function (context, appWidgetManager, appWidgetIds) {
@@ -22,8 +21,6 @@
         var text = taps.toString();
 
         // retrieve our layout and all its views
-       
-        // const context = Application.android.context;
         let R = context.getResources();
         var views = new android.widget.RemoteViews(context.getPackageName(), R.getIdentifier("my_widget", "layout", context.getPackageName()));
     
